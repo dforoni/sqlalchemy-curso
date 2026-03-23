@@ -1,0 +1,9 @@
+# ---------------------- Aula 01 --------------------- #
+
+Prompt para gerar string de conexão:
+
+"Gere o código SQLAlchemy para criar uma engine conectando ao PostgreSQL.
+Host: localhost, porta: 5432, banco: datavendas, usuário e senha via variável de ambiente.
+Inclua tratamento de erro de conexão e use o padrão com .env."
+
+# ---------------------- Aula 02 --------------------- #
