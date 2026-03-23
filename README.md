@@ -15,11 +15,21 @@ Estamos usando o **Poetry** como gerenciador de dependências e ambientes virtua
 ## Pré-requisitos
 
 - Python 3.8 ou superior instalado.
-- Poetry instalado. Se não tiver, instale com:
+
+### Instalação do Poetry
+
+- **No Windows**: Abra o PowerShell como administrador e execute:
+  ```powershell
+  (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+  ```
+  Ou instale via pip: `pip install poetry`
+
+- **No Linux/Mac**:
   ```bash
   curl -sSL https://install.python-poetry.org | python3 -
   ```
-  Ou siga as instruções em [poetry.eustace.io](https://python-poetry.org/docs/#installation).
+
+- Para mais detalhes, consulte [poetry.eustace.io](https://python-poetry.org/docs/#installation).
 
 ## Configuração do Projeto
 
