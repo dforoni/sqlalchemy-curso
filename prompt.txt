@@ -58,3 +58,15 @@ Usando os modelos SQLAlchemy abaixo, escreva uma query Python que responda:
 agrupados por categoria, com o total de receita de cada?"
 
 [cole os modelos ORM aqui]
+
+# ---------------------- Aula 06 --------------------- #
+
+Prompt para gerar pipeline Pandas:
+
+Crie um pipeline SQLAlchemy + Pandas que:
+1. Busque os pedidos do último mês com cliente e itens (sem N+1)
+2. Converta para DataFrame
+3. Calcule receita total por categoria de produto
+4. Retorne o top 5 categorias
+
+Modelos ORM: [cole os modelos]
