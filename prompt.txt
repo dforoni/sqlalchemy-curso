@@ -70,3 +70,15 @@ Crie um pipeline SQLAlchemy + Pandas que:
 4. Retorne o top 5 categorias
 
 Modelos ORM: [cole os modelos]
+
+# ---------------------- Aula 07 --------------------- #
+
+Prompt para decompor uma pergunta em query:
+
+Com os modelos SQLAlchemy abaixo, escreva a query para responder:
+"Quais clientes que compraram na última semana NÃO compraram nenhum
+produto da categoria 'Promoção'?"
+Use subconsultas com IN ou NOT EXISTS conforme apropriado.
+Explique cada etapa.
+
+[modelos ORM]
