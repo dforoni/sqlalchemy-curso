@@ -48,3 +48,18 @@ cidades e estados reais, 50 produtos em 5 categorias, e 100 pedidos
 distribuídos aleatoriamente. Use a biblioteca Faker para os dados.
 [cole os modelos aqui]
 ```
+
+# ---------------------- Aula 03 --------------------- #
+Prompt para converter código legado:
+Este código usa f-strings para montar queries SQL (vulnerável).
+Reescreva usando SQLAlchemy com consultas parametrizadas e adicione
+validação de tipo nas entradas externas:
+
+```python
+def buscar_cliente_vulneravel(engine, id_input):
+    sql = f"SELECT id, nome, email FROM tb_clientes WHERE id = {id_input}"
+    print(f"SQL gerado: {sql}")
+    
+    with engine.connect() as conn:
+        return conn.execute(text(sql)).fetchall()
+```
