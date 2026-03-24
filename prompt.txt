@@ -7,3 +7,44 @@ Host: localhost, porta: 5432, banco: datavendas, usuário e senha via variável 
 Inclua tratamento de erro de conexão e use o padrão com .env."
 
 # ---------------------- Aula 02 --------------------- #
+
+Gerar schemas a partir de uma descrição em linguagem natural é um dos melhores usos de IA no dia a dia de dados.
+
+Prompt para gerar um schema completo:
+
+Preciso criar as tabelas de um sistema de RH no SQLAlchemy Core (Python).
+As entidades são: Departamento, Funcionário e Cargo.
+- Departamento: id, nome, centro_de_custo
+- Funcionário: id, nome, email (único), data_admissão, salário (monetário), 
+  id_departamento (FK), id_cargo (FK), ativo (boolean)
+- Cargo: id, titulo, nivel (júnior/pleno/sênior — use CheckConstraint)
+Use tipos adequados para valores monetários e datas.
+
+# ---------------------- Aula 03 --------------------- #
+
+Gerar modelos ORM é uma tarefa excelente para IA especialmente quando você já tem um schema SQL e precisa criar os modelos Python correspondentes.
+
+Prompt para converter SQL em modelo ORM:
+
+Converta este CREATE TABLE SQL para um modelo SQLAlchemy ORM usando
+DeclarativeBase, Mapped e mapped_column (estilo moderno do SQLAlchemy 2.x).
+Inclua o __repr__ e os relacionamentos:
+
+CREATE TABLE tb_funcionarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    salario NUMERIC(10,2) NOT NULL,
+    departamento_id INTEGER REFERENCES tb_departamentos(id),
+    ativo BOOLEAN DEFAULT true
+);
+
+# APROVEITAR
+**Prompt para gerar dados de teste:**
+```
+Crie um script Python que popula o banco com dados fictícios realistas
+usando os modelos SQLAlchemy abaixo. Gere 20 clientes brasileiros com
+cidades e estados reais, 50 produtos em 5 categorias, e 100 pedidos
+distribuídos aleatoriamente. Use a biblioteca Faker para os dados.
+[cole os modelos aqui]
+```
