@@ -95,3 +95,41 @@ Use GROUP BY + HAVING.
 [modelos ORM]
 
 # ---------------------- Aula 09 --------------------- #
+
+Prompt para otimizar JOINs múltiplos:
+
+Tenho esta query SQLAlchemy com 3 JOINs encadeados que está lenta.
+Sugira: índices que deveriam existir, reescrita mais eficiente,
+ou se subconsulta seria mais adequada em alguma parte.
+
+
+```python 
+with Session(engine) as session:
+
+    stmt = (
+        select(            
+            Cliente.nome.label("cliente"),          
+            Pedido.id.label("pedido"),
+            Produto.nome.label("produto"),
+            Produto.categoria,
+            ItemPedido.quantidade,
+            ItemPedido.preco_venda,            
+            (ItemPedido.quantidade * ItemPedido.preco_venda).label("subtotal")
+        )
+        
+        .join(Pedido, Cliente.id == Pedido.cliente_id)        
+        .join(ItemPedido, Pedido.id == ItemPedido.pedido_id)        
+        .join(Produto, ItemPedido.produto_id == Produto.id)        
+        .order_by("subtotal")
+    )
+
+    linhas = session.execute(stmt).all()    
+    print(f"Itens vendidos (com contexto completo): {len(linhas)}")
+    print("-" * 80)
+
+    # Percorre apenas os 3 primeiros resultados
+    for l in linhas[:3]:
+        
+        # Exibe as informações formatadas de cada item
+        print(f"  {l.cliente} → Pedido #{l.pedido} | {l.quantidade}x {l.produto} | R${l.subtotal}")
+```
