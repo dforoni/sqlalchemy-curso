@@ -82,3 +82,16 @@ Use subconsultas com IN ou NOT EXISTS conforme apropriado.
 Explique cada etapa.
 
 [modelos ORM]
+
+# ---------------------- Aula 08 --------------------- #
+
+Prompt para gerar um HAVING:
+
+Com os modelos SQLAlchemy abaixo, escreva uma query que retorne
+os estados com mais de 2 clientes cadastrados, ordenados
+pelo total de clientes decrescente.
+Use GROUP BY + HAVING.
+
+[modelos ORM]
+
+# ---------------------- Aula 09 --------------------- #
