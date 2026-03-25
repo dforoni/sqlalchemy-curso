@@ -145,3 +145,16 @@ Exclua pedidos com status 'Cancelado'.
 Mostre também o DROP VIEW IF EXISTS antes do CREATE.
 
 # ---------------------- Aula 11 --------------------- #
+
+Prompt para gerar um batch update seguro:
+
+Preciso reajustar o preço de produtos em lote usando SQLAlchemy.
+Crie um script que:
+
+1. Leia os produtos de uma categoria via select()
+2. Aplique um reajuste percentual recebido como parâmetro
+3. Valide que nenhum preço novo ultrapassa um teto máximo
+4. Execute o batch update com session.execute(update(), lista)
+5. Confirme os novos preços com um select() final
+
+Modelo Produto: [cole o modelo]
