@@ -133,3 +133,15 @@ with Session(engine) as session:
         # Exibe as informações formatadas de cada item
         print(f"  {l.cliente} → Pedido #{l.pedido} | {l.quantidade}x {l.produto} | R${l.subtotal}")
 ```
+
+# ---------------------- Aula 10 --------------------- #
+
+Prompt para gerar uma view a partir de uma pergunta:
+
+Com estas tabelas SQLite (tb_clientes, tb_pedidos, tb_itens_pedidos, tb_produtos),
+crie uma VIEW chamada vw_receita_mensal que retorne:
+ano, mês, total de pedidos, receita total e ticket médio.
+Exclua pedidos com status 'Cancelado'.
+Mostre também o DROP VIEW IF EXISTS antes do CREATE.
+
+# ---------------------- Aula 11 --------------------- #
