@@ -22,10 +22,6 @@ Use tipos adequados para valores monetários e datas.
 
 # ---------------------- Aula 03 --------------------- #
 
-Gerar modelos ORM é uma tarefa excelente para IA especialmente quando você já tem um schema SQL e precisa criar os modelos Python correspondentes.
-
-Prompt para gerar dados de teste:
-
 Crie um script Python que popula o banco com dados fictícios realistas
 usando os modelos SQLAlchemy abaixo. Gere 20 clientes brasileiros com
 cidades e estados reais, 50 produtos em 5 categorias, e 100 pedidos
