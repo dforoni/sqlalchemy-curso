@@ -208,8 +208,3 @@ __marimo__/
 
 # Database files
 *.db
-
-# Projeto
-*.txt
-*.lock
-*.toml
