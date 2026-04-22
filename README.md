@@ -14,7 +14,7 @@ clientes  ──<  pedidos  ──<  itens_pedidos  >──  produtos
 
 ## Conteúdo das Aulas
 
-### Aula 01 — Setup do Projeto & Conexão com o Banco (`01_setup_e_conexao.ipynb`)
+### Setup do Projeto & Conexão com o Banco (`01_setup_e_conexao.ipynb`)
 
 Introdução ao SQLAlchemy e configuração do ambiente de desenvolvimento.
 
@@ -29,7 +29,7 @@ Introdução ao SQLAlchemy e configuração do ambiente de desenvolvimento.
 
 ---
 
-### Aula 02 — Modelando o Banco com SQLAlchemy Core (`02_modelando_com_core.ipynb`)
+### Modelando o Banco com SQLAlchemy Core (`02_modelando_com_core.ipynb`)
 
 Criação do schema do banco via código Python, com controle de versão pelo Git.
 
@@ -49,7 +49,7 @@ Criação do schema do banco via código Python, com controle de versão pelo Gi
 
 ---
 
-### Aula 03 — Trabalhando com ORM: Modelos e Sessão (`03_orm_modelos_e_sessao.ipynb`)
+### Trabalhando com ORM: Modelos e Sessão (`03_orm_modelos_e_sessao.ipynb`)
 
 Trabalho com o banco usando classes Python em vez de strings SQL.
 
@@ -65,7 +65,7 @@ Trabalho com o banco usando classes Python em vez de strings SQL.
 
 ---
 
-### Aula 04 — Segurança: SQL Injection (`04_sql_injection_seguranca.ipynb`)
+### Segurança: SQL Injection (`04_sql_injection_seguranca.ipynb`)
 
 Como proteger seu código contra a vulnerabilidade mais comum em sistemas com banco de dados.
 
@@ -78,7 +78,7 @@ Como proteger seu código contra a vulnerabilidade mais comum em sistemas com ba
 
 ---
 
-### Aula 05 — Consultando Dados: select(), Filtros e Paginação (`05_consultando_dados.ipynb`)
+### Consultando Dados: select(), Filtros e Paginação (`05_consultando_dados.ipynb`)
 
 Traduzindo perguntas de negócio em queries Python com o `select()` moderno do SQLAlchemy 2.x.
 
@@ -91,7 +91,7 @@ Traduzindo perguntas de negócio em queries Python com o `select()` moderno do S
 - Construir queries dinâmicas em etapas
 ---
 
-### Aula 06 — Relacionamentos, N+1 e Entregando Dados para o Pandas (`06_relacionamentos_n1_pandas.ipynb`)
+### Relacionamentos, N+1 e Entregando Dados para o Pandas (`06_relacionamentos_n1_pandas.ipynb`)
 
 Diagnóstico e correção do problema N+1, e pipeline para entrega de dados ao Pandas.
 
@@ -103,7 +103,7 @@ Diagnóstico e correção do problema N+1, e pipeline para entrega de dados ao P
 
 ---
 
-### Aula 07 — Consultas Compostas: UNION, Subconsultas, IN e EXISTS (`07_consultas_compostas.ipynb`)
+### Consultas Compostas: UNION, Subconsultas, IN e EXISTS (`07_consultas_compostas.ipynb`)
 
 Técnicas para responder perguntas que uma query simples não consegue dar.
 
@@ -116,7 +116,7 @@ Técnicas para responder perguntas que uma query simples não consegue dar.
 
 ---
 
-### Aula 08 — Filtrando Grupos: HAVING e ANY (`08_any_e_having.ipynb`)
+### Filtrando Grupos: HAVING e ANY (`08_any_e_having.ipynb`)
 
 Filtros sobre resultados agregados e comparações com conjuntos.
 
@@ -128,7 +128,7 @@ Filtros sobre resultados agregados e comparações com conjuntos.
 
 ---
 
-### Aula 09 — JOINs: INNER, LEFT, Múltiplos e Self-Join (`09_joins_avancados.ipynb`)
+### JOINs: INNER, LEFT, Múltiplos e Self-Join (`09_joins_avancados.ipynb`)
 
 Domínio completo de JOINs, incluindo diagnóstico de bugs silenciosos.
 
@@ -143,7 +143,7 @@ Domínio completo de JOINs, incluindo diagnóstico de bugs silenciosos.
 
 ---
 
-### Aula 10 — Views e Triggers: Lógica que Vive no Banco (`10_views_e_triggers.ipynb`)
+### Views e Triggers: Lógica que Vive no Banco (`10_views_e_triggers.ipynb`)
 
 Encapsulamento de JOINs complexos em views e manutenção automática de consistência com triggers.
 
@@ -160,7 +160,7 @@ Encapsulamento de JOINs complexos em views e manutenção automática de consist
 
 ---
 
-### Aula 11 — UPDATE, DELETE, Transações (`11_update_delete_transacoes_core.ipynb`)
+### UPDATE, DELETE, Transações (`11_update_delete_transacoes_core.ipynb`)
 
 Modificação segura de dados, transações atômicas e operações de alto volume.
 
@@ -172,79 +172,6 @@ Modificação segura de dados, transações atômicas e operações de alto volu
 - Diagnosticar e testar rollback automático em falhas de integridade
 ---
 
-## Gerenciamento de Ambiente Virtual
-
-Estamos usando o **Poetry** como gerenciador de dependências e ambientes virtuais. O Poetry simplifica o gerenciamento de pacotes Python, resolve conflitos de dependências e cria ambientes isolados automaticamente.
-
-### Por que Poetry?
-- **Isolamento**: Cada projeto tem seu próprio ambiente virtual.
-- **Gerenciamento de dependências**: Arquivo `pyproject.toml` centraliza tudo.
-- **Reprodutibilidade**: Lockfile (`poetry.lock`) garante versões exatas.
-- **Simplicidade**: Comandos intuitivos para instalar, adicionar e remover pacotes.
-
-## Pré-requisitos
-
-- Python 3.8 ou superior instalado.
-
-### Instalação do Poetry
-
-- **No Windows**: Abra o PowerShell como administrador e execute:
-  ```powershell
-  (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
-  ```
-  Ou instale via pip: `pip install poetry`
-
-- **No Linux/Mac**:
-  ```bash
-  curl -sSL https://install.python-poetry.org | python3 -
-  ```
-
-- Para mais detalhes, consulte [poetry.eustace.io](https://python-poetry.org/docs/#installation).
-
-## Configuração do Projeto
-
-1. **Clone o repositório** (se aplicável):
-   ```bash
-   git clone git@github.com:dforoni/sqlalchemy-curso.git
-   cd sqlalchemy-curso
-   ```
-
-2. **Instale as dependências**:
-   ```bash
-   poetry install
-   ```
-   Isso criará um ambiente virtual e instalará todos os pacotes listados no `pyproject.toml`.
-
-3. **Ative o ambiente virtual** (opcional, Poetry faz isso automaticamente em muitos comandos):
-   ```bash
-   poetry shell
-   ```
-
-## Como Usar
-
-- Para executar scripts Python: `poetry run python seu_script.py`
-- Para adicionar novas dependências: `poetry add nome-do-pacote`
-- Para remover dependências: `poetry remove nome-do-pacote`
-- Para atualizar dependências: `poetry update`
-
-## Estrutura do Projeto
-
-- `pyproject.toml`: Configuração do Poetry e dependências.
-- `.gitignore`: Arquivos ignorados pelo Git (incluindo arquivos `.db` para bancos de dados).
-- `01_setup_e_conexao.ipynb`: Setup e conexão com o banco.
-- `02_modelando_com_core.ipynb`: Modelagem do schema com SQLAlchemy Core.
-- `03_orm_modelos_e_sessao.ipynb`: Modelos ORM e operações com a Session.
-- `04_sql_injection_seguranca.ipynb`: SQL Injection e consultas parametrizadas.
-- `05_consultando_dados.ipynb`: select(), filtros, ordenação e paginação.
-- `06_relacionamentos_n1_pandas.ipynb`: Lazy/eager loading, problema N+1 e integração com Pandas.
-- `07_consultas_compostas.ipynb`: UNION, subconsultas, IN e EXISTS.
-- `08_any_e_having.ipynb`: Filtrando grupos com HAVING e ANY.
-- `09_joins_avancados.ipynb`: INNER JOIN, LEFT JOIN, JOINs múltiplos e self-join.
-- `10_views_e_triggers.ipynb`: Views e triggers para lógica que vive no banco.
-- `11_update_delete_transacoes_core.ipynb`: UPDATE, DELETE e transações atômicas.
-
 ## Licença
 
 Este projeto é para fins educacionais.
-
----
